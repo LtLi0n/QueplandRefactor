@@ -44,13 +44,30 @@ namespace Quepland
             return levels_added;
         }
 
-        private static string FromSkillType(SkillType skill_type)
-        {
-            //Fell free to implement this.
-            //SkillName would then be able to be replaced with:
-            //SkillName => FromSkillType(SkillType);
-            return null;
-        }
+        public static string FromSkillType(SkillType skill_type) =>
+            skill_type switch
+            {
+                SkillType.Unknown => "Unknown",
+                SkillType.HP => "HP",
+                SkillType.Knifesmanship => "Knifesmanship",
+                SkillType.Swordsmanship => "Swordsmanship",
+                SkillType.Axemanship => "Axemanship",
+                SkillType.Hammermanship => "Hammermanship",
+                SkillType.Deftness => "Deftness",
+                SkillType.Strength => "Strength",
+                SkillType.Archery => "Archery",
+                SkillType.Mining => "Mining",
+                SkillType.Smithing => "Smithing",
+                SkillType.Alchemy => "Alchemy",
+                SkillType.Fishing => "Fishing",
+                SkillType.Woodcutting => "Woodcutting",
+                SkillType.Woodworking => "Woodworking",
+                SkillType.Hunting => "Hunting",
+                SkillType.Culinary_Arts => "Culinary Arts",
+                SkillType.Leatherworking => "Leatherworking",
+                SkillType.Construction => "Construction",
+                _ => throw new NotImplementedException()
+            };
 
         public static long GetRequiredExperience(int level)
         {
