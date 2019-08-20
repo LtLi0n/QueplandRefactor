@@ -3,9 +3,9 @@ using System.Linq;
 
 namespace Quepland
 {
-    public class PetManagerService : EntityManagerBase<Pet, string>
+    public class PetManager : EntityManagerBase<Pet, string>
     {
-        public PetManagerService() { }
+        public PetManager() { }
 
         protected override Dictionary<string, Pet> Load() =>
             new Dictionary<string, Pet>

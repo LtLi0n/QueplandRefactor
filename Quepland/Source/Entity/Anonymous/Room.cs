@@ -4,6 +4,13 @@ namespace Quepland
 {
     public class Room : IEntity<Room, string>
     {
+        public static class Ref
+        {
+            public const string Master_Bedroom = "Master_Bedroom";
+            public const string Arena = "Arena";
+            public const string Chicken_Room = "Chicken_Room";
+        }
+
         public string Id { get; }
         public string Name { get; }
         public string Description { get; }
@@ -40,7 +47,7 @@ namespace Quepland
         }
 
         public static Room Master_Bedroom { get; } = new Room(
-            id: "Master_Bedroom",
+            id: Ref.Master_Bedroom,
             name: "Master Bedroom",
             description: "Your main bedroom. You can build various pieces of furniture to make it more comfortabal. Your house can only have one master bedroom.",
             constructionLevelRequired: 1,
@@ -50,7 +57,7 @@ namespace Quepland
             barsRequired: 500);
 
         public static Room Arena { get; } = new Room(
-            id: "Arena",
+            id: Ref.Arena,
             name: "Arena",
             description: "The arena is a place in your home that lets you kill things. Simply build a kyonshi of the monster you want to kill, and activate it for private farming.",
             constructionLevelRequired: 20,
@@ -60,7 +67,7 @@ namespace Quepland
             barsRequired: 1500);
 
         public static Room Chicken_Room { get; } = new Room(
-            id: "Chicken_Room",
+            id: Ref.Chicken_Room,
             name: "Chicken Room",
             description: "The chicken room can be filled with chicken coops, which produce eggs and feathers daily.",
             constructionLevelRequired: 10,

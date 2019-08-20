@@ -3,9 +3,9 @@ using System.Linq;
 
 namespace Quepland
 {
-    public class RoomManagerService : EntityManagerBase<Room, string>
+    public class RoomManager : EntityManagerBase<Room, string>
     {
-        public RoomManagerService() { }
+        public RoomManager() { }
 
         protected override Dictionary<string, Room> Load() => 
             new Dictionary<string, Room>

@@ -4,6 +4,12 @@ namespace Quepland
 {
     public class Pet : IEntity<Pet, string>
     {
+        public static class Ref
+        {
+            public const string chicken = "chicken";
+            public const string scarab = "scarab";
+        }
+
         public string Id { get; }
         public string Name { get; }
         public string Description { get; }
@@ -36,7 +42,7 @@ namespace Quepland
         }
 
         public static Pet Chicken { get; } = new Pet(
-            id: "chicken",
+            id: Ref.chicken,
             name: "Chicken",
             description: 
             "The Chicken is a loyal companion, or she would be if her brain weren't the size of a pea." +
@@ -50,7 +56,7 @@ namespace Quepland
         public static class Buyable
         {
             public static Pet Scarab { get; } = new Pet(
-                id: "scarab",
+                id: Ref.scarab,
                 name: "Scarab",
                 description:
                 "The scarab is a shiny companion." +

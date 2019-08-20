@@ -1,3 +1,17 @@
 ﻿@page "/"
+@inject EntityDataService Data
+@using Quepland;
+@using static Quepland.Room.Ref;
+@using static Quepland.Pet.Ref;
 
 <h1>Hello, Welcome to Quepland!</h1>
+
+@Rooms[Arena].ConstructionLevelRequired
+@Pets[scarab].Description
+
+@functions
+{
+    RoomManager Rooms => Data.GetEntityManager<RoomManager>();
+    PetManager Pets => Data.GetEntityManager<PetManager>();
+}
+    
