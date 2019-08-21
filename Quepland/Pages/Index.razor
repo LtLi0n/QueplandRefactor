@@ -8,10 +8,12 @@
 
 @Rooms[Arena].ConstructionLevelRequired
 @Pets[scarab].Description
+@Followers[4].Description
 
 @functions
 {
-    RoomManager Rooms => Data.GetEntityManager<RoomManager>();
-    PetManager Pets => Data.GetEntityManager<PetManager>();
+    RoomContainer Rooms => Data.GetContainer<RoomContainer>();
+    PetContainer Pets => Data.GetContainer<PetContainer>();
+    FollowerContainer Followers => Data.GetContainer<FollowerContainer>();
 }
     
